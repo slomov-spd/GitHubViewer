@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepoDetailsViewController" customModule="GitHubViewer" customModuleProvider="target">
+            <connections>
+                <outlet property="goToHubButton" destination="o2p-q5-M1l" id="FYa-Zm-MKr"/>
+                <outlet property="tableView" destination="3wB-Zb-0fI" id="Ayb-cN-9yt"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ij3-8g-wGv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3wB-Zb-0fI">
+                    <rect key="frame" x="0.0" y="44" width="414" height="778"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="oUl-4c-V47"/>
+                        <outlet property="delegate" destination="-1" id="hiy-Do-0ib"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22d-fn-nkM">
+                    <rect key="frame" x="0.0" y="822" width="414" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2p-q5-M1l">
+                            <rect key="frame" x="142.5" y="4.5" width="129" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Look at GithHub"/>
+                            <connections>
+                                <action selector="lookAtHubTapped" destination="-1" eventType="touchUpInside" id="nrm-PV-VUN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="o2p-q5-M1l" firstAttribute="centerX" secondItem="22d-fn-nkM" secondAttribute="centerX" id="G7H-3a-Pgf"/>
+                        <constraint firstItem="o2p-q5-M1l" firstAttribute="centerY" secondItem="22d-fn-nkM" secondAttribute="centerY" id="RnU-Du-FS3"/>
+                        <constraint firstAttribute="height" constant="40" id="dzo-Tj-pK0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="22d-fn-nkM" secondAttribute="trailing" id="IqA-A7-k8P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3wB-Zb-0fI" secondAttribute="trailing" id="Qtc-9Q-7DC"/>
+                <constraint firstItem="22d-fn-nkM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jOU-1X-aKU"/>
+                <constraint firstItem="22d-fn-nkM" firstAttribute="top" secondItem="3wB-Zb-0fI" secondAttribute="bottom" id="mfz-rG-LbA"/>
+                <constraint firstItem="22d-fn-nkM" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="mr9-FH-dfZ"/>
+                <constraint firstItem="3wB-Zb-0fI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nLr-Zf-uyJ"/>
+                <constraint firstItem="3wB-Zb-0fI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xiO-02-Rpk"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="104.46428571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
